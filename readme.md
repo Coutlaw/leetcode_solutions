@@ -8,4 +8,4 @@ This is a collection of my solutions to various LeetCode problems in Rust. The `
 | path to solution      | leetcode problem # |
 | ----------- | ----------- |
 | lib/remove_element      | 27       |
-|     |         |
+| lib/add_two_numbers |   2      |
