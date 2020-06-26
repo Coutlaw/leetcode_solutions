@@ -35,12 +35,11 @@ pub fn search(nums: Vec<i32>, target: i32) -> i32 {
     // standard binary search impl
     use std::cmp;
     let mut low = 0;
-    let mut high = cmp::max(low, nums.len() + 1);
+    let mut high = cmp::max(low, nums.len() - 1);
     let mut mid = 0;
 
     while low < high {
         mid = (low + high) / 2;
-        println!("{}", mid);
         if target <= nums[mid] {
             high = mid;
         } else {
@@ -63,6 +62,14 @@ mod tests {
         let nums = vec![-1,0,3,5,9,12];
         let target = 9;
         let result = 4;
+        assert_eq!(search(nums, target), result);
+    }
+
+    #[test]
+    fn it_works2() {
+        let nums = vec![5];
+        let target = 5;
+        let result = 0;
         assert_eq!(search(nums, target), result);
     }
 }
