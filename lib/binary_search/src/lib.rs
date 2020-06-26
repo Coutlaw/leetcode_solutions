@@ -26,30 +26,32 @@ Note:
 */
 
 pub fn search(nums: Vec<i32>, target: i32) -> i32 {
-    // standard binary search impl
-    // use std::cmp;
-    // let mut low = nums[0];
-    // let mut high = cmp::max(low, nums[nums.len() - 1] + 1);
-    // let mut mid: i32 = 0;
+    // Not binary search, but this is a valid solution
+    // match nums.iter().position(|&v| v == target) {
+    //     Some(x) => return x as i32,
+    //     None => return -1,
+    // }
 
-    // while low < high {
-    //     mid = (low + high) / 2;
-    //     println!("{}", mid);
-    //     if target <= nums[mid as usize] {
-    //         high = mid;
-    //     } else {
-    //         low = mid + 1
-    //     }
-    // }
-    match nums.iter().position(|&v| v == target) {
-        Some(x) => return x as i32,
-        None => return -1,
+    // standard binary search impl
+    use std::cmp;
+    let mut low = 0;
+    let mut high = cmp::max(low, nums.len() + 1);
+    let mut mid = 0;
+
+    while low < high {
+        mid = (low + high) / 2;
+        println!("{}", mid);
+        if target <= nums[mid] {
+            high = mid;
+        } else {
+            low = mid + 1
+        }
     }
-    // if high == target{
-    //     return nums.iter().position(|&v| v == target).unwrap() as i32;
-    // } else {
-    //     return -1
-    // }
+    if nums[high] == target {
+        return high as i32;
+    } else {
+        return -1
+    }
 }
 
 #[cfg(test)]
