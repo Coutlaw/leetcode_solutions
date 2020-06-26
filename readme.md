@@ -9,3 +9,5 @@ This is a collection of my solutions to various LeetCode problems in Rust. The `
 | ----------- | ----------- |
 | lib/remove_element      | 27       |
 | lib/add_two_numbers |   2      |
+| lib/valid_parentheses |   20      |
+| lib/binary_search |   704      |
