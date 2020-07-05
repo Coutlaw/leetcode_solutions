@@ -12,3 +12,4 @@ This is a collection of my solutions to various LeetCode problems in Rust. The `
 | lib/valid_parentheses |   20      |
 | lib/binary_search |   704      |
 | lib/search_insert_position |   35      |
+| lib/i32_reverse |   7      |
