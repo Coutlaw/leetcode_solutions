@@ -14,4 +14,6 @@ This is a collection of my solutions to various LeetCode problems in Rust. The `
 | lib/search_insert_position |   35      |
 | lib/i32_reverse |   7      |
 | lib/palindrome_i32 |   ?      |
+| lib/merge_two_sorted_lists |   ?      |
+
 
