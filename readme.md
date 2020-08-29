@@ -15,5 +15,7 @@ This is a collection of my solutions to various LeetCode problems in Rust. The `
 | lib/i32_reverse |   7      |
 | lib/palindrome_i32 |   ?      |
 | lib/merge_two_sorted_lists |   ?      |
+| lib/two_sum |   ?      |
+
 
 
