@@ -7,16 +7,16 @@ This is a collection of my solutions to various LeetCode problems in Rust. The `
 
 | path to solution      | leetcode problem # |
 | ----------- | ----------- |
-| lib/remove_element      | 27       |
+| lib/remove_element | 27       |
 | lib/add_two_numbers |   2      |
 | lib/valid_parentheses |   20      |
 | lib/binary_search |   704      |
 | lib/search_insert_position |   35      |
 | lib/i32_reverse |   7      |
-| lib/roman_to_int |   13s      |
-| lib/palindrome_i32 |   ?      |
-| lib/merge_two_sorted_lists |   ?      |
-| lib/two_sum |   ?      |
+| lib/roman_to_int |   13      |
+| lib/palindrome_i32 |   9      |
+| lib/merge_two_sorted_lists |   21      |
+| lib/two_sum |   1      |
 
 
 
