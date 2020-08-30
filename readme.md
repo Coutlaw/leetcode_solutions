@@ -18,6 +18,8 @@ This is a collection of my solutions to various LeetCode problems in Rust. The `
 | lib/merge_two_sorted_lists |   21      |
 | lib/two_sum |   1      |
 | lib/longest_common_prefix |   14      |
+| lib/strStr |   28      |
+
 
 
 
