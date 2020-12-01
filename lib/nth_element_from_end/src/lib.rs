@@ -13,8 +13,37 @@ impl ListNode {
 }
 
 impl ListNode {
+    /*
+        First create a head mutable replica since its not mutable as a parm
+        then two separate variables (tail, follow) will start at the beginig of the list
+        Tail will advance n spaces ahead of follow, so that when tail gets to the end of the list
+        follow will be infront of the node we need to delete.
+        Move tail and follow down the list until tail is at the last node
+        then update follow (its a mutable borrow of mutable head) to skip the next node.
+        Replica will have a new value on the head, this keeps follow infront of n.
+    */
     pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
-        None
+        let mut dummy = ListNode::new(0);
+        dummy.next = head;
+        let mut replica_head = Box::new(dummy);
+
+        let mut tail = replica_head.clone();
+        let mut follow = replica_head.as_mut();
+
+        for _ in 0..n {
+            tail = tail.next.unwrap();
+        }
+
+        while tail.next.is_some() {
+            tail = tail.next.unwrap();
+            follow = follow.next.as_mut().unwrap();
+        }
+
+        let next = follow.next.as_mut().unwrap();
+        follow.next = next.next.clone();
+
+        // return our replica, skipping the first dummy value
+        replica_head.next
     }
 }
 
